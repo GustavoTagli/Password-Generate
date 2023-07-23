@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/dist/css/style.css" />
+    <script src="index.js" defer></script>
+    <title>Password Generate</title>
+  </head>
+  <body>
+    <form method="post" class="container">
+      <h1>Password Generate</h1>
+      <div class="containerPasswordInput">
+        <input type="text" name="password" id="password" disabled />
+        <button id="clipboard-btn">
+          <img
+            src="./public/images/clipboard2.svg"
+            class="imageClipboard"
+            alt=""
+          />
+          <p></p>
+        </button>
+      </div>
+      <div class="containerPasswordOptions">
+        <div class="containerLengthOption">
+          <label for="len-password">Length: 15</label>
+          <input
+            type="range"
+            name="len-password"
+            id="len-password"
+            min="8"
+            max="35"
+            value="15"
+          />
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="uppercase-password"
+            id="uppercase-password"
+          />
+          <label for="uppercase-password">Uppercase</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="lowercase-password"
+            id="lowercase-password"
+          />
+          <label for="lowercase-password">Lowercase</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="numbers-password"
+            id="numbers-password"
+          />
+          <label for="numbers-password">Numbers</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="symbols-password"
+            id="symbols-password"
+          />
+          <label for="symbols-password">Symbols</label>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

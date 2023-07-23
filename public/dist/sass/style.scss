@@ -1,0 +1,89 @@
+$primary-color: #2a2a2a;
+$secondary-color: #f2f2f2;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter;
+  color: $secondary-color;
+  user-select: none;
+}
+body {
+  background-color: $primary-color;
+}
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 60px;
+}
+.containerPasswordInput {
+  width: 420px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid $secondary-color;
+  border-radius: 8px;
+  padding: 5px 10px;
+}
+.containerPasswordInput input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+.containerPasswordInput button {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  border: none;
+  width: 18px;
+}
+.containerPasswordInput button p {
+  position: absolute;
+  font-size: 8px;
+  margin-top: 18px;
+}
+.imageClipboard {
+  filter: invert(100%) sepia(3%) saturate(37%) hue-rotate(173deg)
+    brightness(113%) contrast(90%);
+  width: inherit;
+  &:hover {
+    cursor: pointer;
+    background-image: url("../../images/clipboard2-fill.svg");
+    filter: invert(100%) sepia(3%) saturate(37%) hue-rotate(173deg)
+      brightness(113%) contrast(90%);
+  }
+}
+.imagemOnClipboard {
+  background-image: url("../../images/clipboard2-fill.svg");
+  filter: invert(100%) sepia(3%) saturate(37%) hue-rotate(173deg)
+    brightness(113%) contrast(90%);
+}
+.containerPasswordOptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 15px;
+}
+.containerPasswordOptions input,
+.containerPasswordOptions input[type="checkbox"] + label {
+  cursor: pointer;
+}
+.containerLengthOption {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
